@@ -29,6 +29,10 @@ public:
     int getHp(){ return nStats.getHp(); }
     int getStrength(){ return nStats.getStrength(); }
     int getStamina(){ return nStats.getStamina(); }
+    void setHp(int hp){ nStats.hp = hp; }
+    void setStrength(int strength){ nStats.strength = strength; }
+    void setStamina(int stamina){ nStats.stamina = stamina; }
+    void setName(string name){ cName = name;}
 };
 
 #endif /* Character_hpp */

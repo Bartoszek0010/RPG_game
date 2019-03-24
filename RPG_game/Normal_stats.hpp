@@ -12,15 +12,18 @@
 #include <stdio.h>
 
 struct Normal_stats{
-private:
+public:
     int hp;
     int strength;
     int stamina;
-public:
+    
     Normal_stats(int hp = 0, int strength = 0, int stamina = 0);
     int getHp(){ return hp; }
     int getStrength(){ return strength; }
     int getStamina(){ return stamina; }
+//    void setHp(int hp) {this->hp = hp;}
+//    void setStrength(int strength) {this->strength = strength;}
+//    void setStamina(int stamina) {this->stamina = stamina;}
 };
 
 #endif /* Normal_stats_hpp */

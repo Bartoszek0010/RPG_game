@@ -9,7 +9,7 @@
 #include "Game.hpp"
 using namespace std;
 Game::Game(){
-    createCharacter();
+    
 }
 
 Game& Game::getInstance(){
@@ -17,10 +17,18 @@ Game& Game::getInstance(){
     return g;
 }
 
-Character Game::createCharacter(){
-    string name = "player1";
-    int id = 1;
-    Normal_stats stats = Normal_stats(1,2,3);
+Character Game::createOpponent(string name, int hp, int stamina, int strength){
+    int id = id_counter;
+    inc_id();
+    Normal_stats stats = Normal_stats(hp, strength, stamina);
     Character newC = Character(name, id, stats);
     return newC;
+}
+Player& Game::createPlayer(string name, int hp, int stamina, int strength){
+    int id = id_counter;
+    inc_id();
+//    Normal_stats stats = Normal_stats(hp, strength, stamina);
+    Player &player = Player::getInstance();
+    player.setStats(name, hp, strength, stamina);
+    return player;
 }

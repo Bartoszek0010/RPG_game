@@ -11,6 +11,7 @@
 		BB2C69AA2240D0F6001D51BC /* Game.cpp in Sources */ = {isa = PBXBuildFile; fileRef = BB2C69A82240D0F6001D51BC /* Game.cpp */; };
 		BB2C69AD2240D2B8001D51BC /* Character.cpp in Sources */ = {isa = PBXBuildFile; fileRef = BB2C69AB2240D2B8001D51BC /* Character.cpp */; };
 		BB2C69B12240D38B001D51BC /* Normal_stats.cpp in Sources */ = {isa = PBXBuildFile; fileRef = BB2C69AF2240D38B001D51BC /* Normal_stats.cpp */; };
+		BB52C63B2247F25300765BD8 /* Player.cpp in Sources */ = {isa = PBXBuildFile; fileRef = BB52C6392247F25300765BD8 /* Player.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -34,6 +35,8 @@
 		BB2C69AC2240D2B8001D51BC /* Character.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Character.hpp; sourceTree = "<group>"; };
 		BB2C69AF2240D38B001D51BC /* Normal_stats.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Normal_stats.cpp; sourceTree = "<group>"; };
 		BB2C69B02240D38B001D51BC /* Normal_stats.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Normal_stats.hpp; sourceTree = "<group>"; };
+		BB52C6392247F25300765BD8 /* Player.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Player.cpp; sourceTree = "<group>"; };
+		BB52C63A2247F25300765BD8 /* Player.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Player.hpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -73,6 +76,8 @@
 				BB2C69AC2240D2B8001D51BC /* Character.hpp */,
 				BB2C69AF2240D38B001D51BC /* Normal_stats.cpp */,
 				BB2C69B02240D38B001D51BC /* Normal_stats.hpp */,
+				BB52C6392247F25300765BD8 /* Player.cpp */,
+				BB52C63A2247F25300765BD8 /* Player.hpp */,
 			);
 			path = RPG_game;
 			sourceTree = "<group>";
@@ -137,6 +142,7 @@
 				BB2C69AD2240D2B8001D51BC /* Character.cpp in Sources */,
 				BB2C69A22240D0AB001D51BC /* main.cpp in Sources */,
 				BB2C69AA2240D0F6001D51BC /* Game.cpp in Sources */,
+				BB52C63B2247F25300765BD8 /* Player.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

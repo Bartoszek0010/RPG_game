@@ -13,13 +13,18 @@
 #include <iostream>
 #include "Character.hpp"
 #include "Normal_stats.hpp"
+#include "Player.hpp"
+
 class Game{
 private:
     Game();
     Game(const Game&) = delete;
+    int id_counter = 1;
 public:
     static Game &getInstance();
-    Character createCharacter();
+    Character createOpponent(string name, int hp, int stamina, int strength);
+    Player& createPlayer(string name, int hp, int stamina, int strength);
+    void inc_id(){ id_counter++; }
 };
 
 #endif /* Game_hpp */
