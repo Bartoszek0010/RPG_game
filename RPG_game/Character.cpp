@@ -22,7 +22,7 @@ Character::Character(string cName, int cId, Normal_stats nStats){
     this->nStats = nStats;
 }
 Character::Character(){
-    cout<<"/////////character constructor////////"<<endl;
+    //cout<<"/////////character constructor////////"<<endl;
     
 }
 

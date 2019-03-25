@@ -15,7 +15,7 @@
 #include <iostream>
 using namespace std;
 class Character{
-private:
+protected:
     enum character_types {player, opponent, vendor};
     character_types cType;
     string cName;
@@ -29,9 +29,18 @@ public:
     int getHp(){ return nStats.getHp(); }
     int getStrength(){ return nStats.getStrength(); }
     int getStamina(){ return nStats.getStamina(); }
-    void setHp(int hp){ nStats.hp = hp; }
-    void setStrength(int strength){ nStats.strength = strength; }
-    void setStamina(int stamina){ nStats.stamina = stamina; }
+    void setHp(int hp){
+        if(hp >= 0) {nStats.hp = hp;}
+        else{ nStats.hp = 0; }
+    }
+    void setStrength(int strength){
+        if(strength >= 0) nStats.strength = strength;
+        else nStats.strength = 0;
+    }
+    void setStamina(int stamina){
+        if(stamina >= 0) nStats.stamina = stamina;
+        else nStats.stamina = 0;
+    }
     void setName(string name){ cName = name;}
 };
 
