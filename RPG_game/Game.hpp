@@ -11,13 +11,18 @@
 
 #include <stdio.h>
 #include <iostream>
+#include <cstdlib>
+#include <ctime>
+#include <vector>
+
 #include "Character.hpp"
 #include "Normal_stats.hpp"
 #include "Player.hpp"
 #include "Floor.hpp"
 #include "Opponent.hpp"
-#include <cstdlib>
-#include <ctime>
+#include "Item.hpp"
+#include "ItemType.hpp"
+
 class Game{
 private:
     Game();
@@ -31,6 +36,8 @@ public:
     void inc_id(){ id_counter++; }
     Floor createFloor(int floorNumber, int opponentsAmount, bool bossFloor = false, bool shopFloor = false); // false (MVP settings)
     int attack(Player &player, Opponent &opponent, int playerDec);
+    Item createItem();
+    void giveItem(Player &player, Item &item);
 };
 
 #endif /* Game_hpp */

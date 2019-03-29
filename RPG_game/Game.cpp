@@ -70,3 +70,17 @@ int Game::attack(Player &player, Opponent &opponent, int playerDec){
     }
     return opponentDec;
 }
+
+Item Game::createItem(){
+    ItemType type = weapon;
+    int stat = 5;
+    string name = "sword";
+    string info = "God's sword, this is the strongest sword which you can meet in this world";
+    Item item = Item(type, stat, name, info);
+    return item;
+    
+}
+
+void Game::giveItem(Player &player, Item &item){
+    player.addItem(item);
+}

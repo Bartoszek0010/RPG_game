@@ -23,3 +23,21 @@ void Player::setStats(string name, int hp, int strength, int stamina){
     setStamina(stamina);
     setName(name);
 }
+
+void Player::addItem(Item item){
+    if(backpackAmount.at(item.getType()) < maxAmount.at(item.getType())){
+        backpack.push_back(item);
+        backpackAmount.at(item.getType()) += 1;
+        itemInfo.push_back(item.getInfo());
+    }
+}
+
+void Player::removeItem(int itemId){
+    Item item_temp = backpack.at(itemId);
+    ItemType type = item_temp.getType();
+    backpackAmount.at(type) -= 1;
+    itemInfo.erase(itemInfo.begin() + itemId);
+    backpack.erase(backpack.begin() + itemId);
+}
+
+

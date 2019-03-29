@@ -10,12 +10,12 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "RPG_game/Player.hpp"
-            timestampString = "575215397.133885"
+            timestampString = "575571747.296301"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "16"
-            endingLineNumber = "16"
-            landmarkName = "Player"
+            startingLineNumber = "18"
+            endingLineNumber = "18"
+            landmarkName = "class Player"
             landmarkType = "3">
          </BreakpointContent>
       </BreakpointProxy>

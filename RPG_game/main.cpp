@@ -12,6 +12,12 @@
 #include "Floor.hpp"
 #include "Opponent.hpp"
 using namespace std;
+void getItemsInfo(Player &player){
+    vector<string> items = player.getInfo();
+    for (int i = 0 ;i<items.size();i++){
+        cout<<i + 1<<". "<<items.at(i)<<endl;
+    }
+}
 Player& creating_player(Game &game){
     // here will be creating your own character ( setting 10 points of skills (stamina, hp and strength) and choosing start weapon (sword or bow))
     cout<<"Hello Hero!, I don't know what's your name so tell me please! "<<endl<<"Input Your name: ";
@@ -80,13 +86,18 @@ Floor startingGame(Game &game, Player &player){
     return floor;
 }
 
+// universal function which show information about your opponent - will be using in every battle
 void opponentInfo(Opponent opponent){
     cout<<"Your opponent "<<opponent.getName()<<" has "<<opponent.getHp()<<" HP, "<<opponent.getStrength()<<" points of strength and "<<opponent.getStamina()<<" points of stamina."<<endl;
 }
+
+// universal function which show information about battle (your stats and opponent's stats)
 void battleInfo(Player &player, Opponent &opponent){
     cout<<"Now you have: \n HP: "<<player.getHp()<<endl<<"Stamina: "<<player.getStamina()<<endl<<endl;
     cout<<"Your opponent has: \n HP: "<<opponent.getHp()<<endl<<"Stamina: "<<opponent.getStamina()<<endl<<endl;
 }
+
+//universal function of battle
 void battle(Game &game, Player &player, Floor floor){
     cout<<"You are on the "<<floor.getNumber()<<" floor. You are meeting your opponent now!"<<endl;
     // MVP settings
@@ -111,15 +122,28 @@ void battle(Game &game, Player &player, Floor floor){
     } while(player.getHp() > 0 && opponent.getHp() > 0);
     if(opponent.getHp() == 0){
         cout<<"You won this!! Gratz, your opponent is dead."<<endl;
+        cout<<"After this battle you found a weapon. Do you wnat to take it yes/no?"<<endl;
+        string dec;
+        cin>>dec;
+        if(dec == "yes"){
+            Item item = game.createItem();
+            game.giveItem(player, item);
+            getItemsInfo(player);
+        }
     } else{
         cout<<"You lost this fight :( tu, tu ,tuuuuu"<<endl;
     }
 }
+
+
+
 int main(int argc, const char * argv[]) {
     srand(time(NULL));
     Game &game = Game::getInstance(); // creating engine of game
     Player &player = creating_player(game); // Creating your hero
     Floor floor = startingGame(game, player);
     battle(game, player, floor);
+    
+    
     return 0;
 }
