@@ -84,3 +84,46 @@ Item Game::createItem(){
 void Game::giveItem(Player &player, Item &item){
     player.addItem(item);
 }
+// handle body to reading text and puuting into map (text of every floor)
+void Game::fillFloorMap(string fileName){
+    string nfileType = fileType(fileName);
+    if(nfileType == "txt"){
+        reader txtReader = make_unique<TxtFileReader>();
+        txtReader->setFileName(fileName);
+        try{
+            floorText = txtReader->fillMap();
+        } catch(const char *e){
+            cerr<<e<<endl;
+        }
+    } else if(nfileType == "xml"){
+        reader xmlReader = make_unique<XMLFileReader>();
+        xmlReader->setFileName(fileName);
+        try{
+            floorText = xmlReader->fillMap();
+        } catch(const char *e){
+            cerr<<e<<endl;
+        }
+    } else{
+        cout<<"aaaa";
+    }
+    //cout<<floorText[1]<<endl; // checking of filling map
+}
+// getting type of reading file
+string Game::fileType(string fileName){
+    string returnType;
+    bool startAdding = false;
+    for(int i=0; i<fileName.length();i++){
+        if(startAdding){
+            returnType += fileName[i];
+        }
+        
+        if(fileName[i] == '.'){
+            startAdding = true;
+        }
+    }
+    return returnType;
+}
+// returning text of every floor
+string Game::getFloorText(int floor){
+    return floorText[floor];
+}

@@ -14,6 +14,8 @@
 #include <cstdlib>
 #include <ctime>
 #include <vector>
+#include <fstream>
+#include <map>
 
 #include "Character.hpp"
 #include "Normal_stats.hpp"
@@ -22,13 +24,18 @@
 #include "Opponent.hpp"
 #include "Item.hpp"
 #include "ItemType.hpp"
-
+#include "FileReader.hpp"
+#include "TxtFileReader.hpp"
+#include "XMLFileReader.hpp"
 class Game{
 private:
     Game();
     Game(const Game&) = delete;
     int id_counter = 1;
     int actualFloor;
+    map<int, string> floorText;
+    using reader = unique_ptr<FileReader>;
+    //reader txtReader = make_unique<TxtFileReader>();
 public:
     static Game &getInstance();
     Opponent createOpponent(string name, int hp, int stamina, int strength);
@@ -38,6 +45,9 @@ public:
     int attack(Player &player, Opponent &opponent, int playerDec);
     Item createItem();
     void giveItem(Player &player, Item &item);
+    void fillFloorMap(string fileName);
+    string fileType(string fileName);
+    string getFloorText(int floor);
 };
 
 #endif /* Game_hpp */

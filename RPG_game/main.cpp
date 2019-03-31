@@ -7,16 +7,23 @@
 //
 
 #include <iostream>
+#include <fstream>
+
 #include "Game.hpp"
 #include "Player.hpp"
 #include "Floor.hpp"
 #include "Opponent.hpp"
+
 using namespace std;
+
 void getItemsInfo(Player &player){
     vector<string> items = player.getInfo();
     for (int i = 0 ;i<items.size();i++){
         cout<<i + 1<<". "<<items.at(i)<<endl;
     }
+}
+void printFloorText(int floorNumber, Game &game){
+    cout<<game.getFloorText(floorNumber)<<endl;
 }
 Player& creating_player(Game &game){
     // here will be creating your own character ( setting 10 points of skills (stamina, hp and strength) and choosing start weapon (sword or bow))
@@ -81,7 +88,7 @@ Floor startingGame(Game &game, Player &player){
     bool boss = false, shop = false;
     //////////////////
     Floor floor = game.createFloor(number, opponents, boss, shop);
-    cout<<"You are starting this great war!! At the start you are on the first floor of Kapitol. To help you on every floor i will be inform you how many opponents you will meet on this level, is here a Boss and is here a Vendor with his shop. So let's GO!"<<endl;
+    printFloorText(1, game);
     informPlayer(opponents, boss, shop);
     return floor;
 }
@@ -137,13 +144,14 @@ void battle(Game &game, Player &player, Floor floor){
 
 
 
+
 int main(int argc, const char * argv[]) {
     srand(time(NULL));
     Game &game = Game::getInstance(); // creating engine of game
+    game.fillFloorMap("floorText.txt");
     Player &player = creating_player(game); // Creating your hero
     Floor floor = startingGame(game, player);
     battle(game, player, floor);
-    
     
     return 0;
 }
