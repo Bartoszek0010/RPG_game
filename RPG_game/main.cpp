@@ -88,7 +88,9 @@ Floor startingGame(Game &game, Player &player){
     bool boss = false, shop = false;
     //////////////////
     Floor floor = game.createFloor(number, opponents, boss, shop);
+    //// getting value from map
     printFloorText(1, game);
+    /////////
     informPlayer(opponents, boss, shop);
     return floor;
 }

@@ -84,6 +84,8 @@ Item Game::createItem(){
 void Game::giveItem(Player &player, Item &item){
     player.addItem(item);
 }
+
+
 // handle body to reading text and puuting into map (text of every floor)
 void Game::fillFloorMap(string fileName){
     string nfileType = fileType(fileName);
