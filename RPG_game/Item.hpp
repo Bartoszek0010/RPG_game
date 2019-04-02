@@ -30,6 +30,7 @@ public:
     int getPotionHp();
     int getPotionStamina();
     int getFood();
+    int getStats();
     string getItemName(){ return itemName; }
     ItemType getType();
     string getInfo();

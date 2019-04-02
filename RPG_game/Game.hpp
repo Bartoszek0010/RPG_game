@@ -44,6 +44,7 @@ public:
     Floor createFloor(int floorNumber, int opponentsAmount, bool bossFloor = false, bool shopFloor = false); // false (MVP settings)
     int attack(Player &player, Opponent &opponent, int playerDec);
     Item createItem();
+    Item createItem2();
     void giveItem(Player &player, Item &item);
     void fillFloorMap(string fileName);
     string fileType(string fileName);

@@ -15,6 +15,7 @@
 		BB2C69AD2240D2B8001D51BC /* Character.cpp in Sources */ = {isa = PBXBuildFile; fileRef = BB2C69AB2240D2B8001D51BC /* Character.cpp */; };
 		BB2C69B12240D38B001D51BC /* Normal_stats.cpp in Sources */ = {isa = PBXBuildFile; fileRef = BB2C69AF2240D38B001D51BC /* Normal_stats.cpp */; };
 		BB52C63B2247F25300765BD8 /* Player.cpp in Sources */ = {isa = PBXBuildFile; fileRef = BB52C6392247F25300765BD8 /* Player.cpp */; };
+		BBAE2E232253383000CAE6B6 /* SortBody.cpp in Sources */ = {isa = PBXBuildFile; fileRef = BBAE2E212253383000CAE6B6 /* SortBody.cpp */; };
 		BBD7FEBB224A4D9E00A4042C /* Item.cpp in Sources */ = {isa = PBXBuildFile; fileRef = BBD7FEB9224A4D9E00A4042C /* Item.cpp */; };
 		BBD7FEBE224A545A00A4042C /* ItemType.cpp in Sources */ = {isa = PBXBuildFile; fileRef = BBD7FEBC224A545A00A4042C /* ItemType.cpp */; };
 		BBEFD52922515CC700EB935D /* FileReader.cpp in Sources */ = {isa = PBXBuildFile; fileRef = BBEFD52722515CC700EB935D /* FileReader.cpp */; };
@@ -51,6 +52,8 @@
 		BB2C69B02240D38B001D51BC /* Normal_stats.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Normal_stats.hpp; sourceTree = "<group>"; };
 		BB52C6392247F25300765BD8 /* Player.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Player.cpp; sourceTree = "<group>"; };
 		BB52C63A2247F25300765BD8 /* Player.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Player.hpp; sourceTree = "<group>"; };
+		BBAE2E212253383000CAE6B6 /* SortBody.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = SortBody.cpp; sourceTree = "<group>"; };
+		BBAE2E222253383000CAE6B6 /* SortBody.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = SortBody.hpp; sourceTree = "<group>"; };
 		BBD7FEB9224A4D9E00A4042C /* Item.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Item.cpp; sourceTree = "<group>"; };
 		BBD7FEBA224A4D9E00A4042C /* Item.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Item.hpp; sourceTree = "<group>"; };
 		BBD7FEBC224A545A00A4042C /* ItemType.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = ItemType.cpp; sourceTree = "<group>"; };
@@ -118,6 +121,8 @@
 				BBEFD52B22515EE000EB935D /* TxtFileReader.hpp */,
 				BBEFD52D22516A0500EB935D /* XMLFileReader.cpp */,
 				BBEFD52E22516A0500EB935D /* XMLFileReader.hpp */,
+				BBAE2E212253383000CAE6B6 /* SortBody.cpp */,
+				BBAE2E222253383000CAE6B6 /* SortBody.hpp */,
 			);
 			path = RPG_game;
 			sourceTree = "<group>";
@@ -179,6 +184,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				BBEFD52F22516A0500EB935D /* XMLFileReader.cpp in Sources */,
+				BBAE2E232253383000CAE6B6 /* SortBody.cpp in Sources */,
 				BBD7FEBE224A545A00A4042C /* ItemType.cpp in Sources */,
 				BBD7FEBB224A4D9E00A4042C /* Item.cpp in Sources */,
 				BB16ED8A2248E7670079DB94 /* Opponent.cpp in Sources */,

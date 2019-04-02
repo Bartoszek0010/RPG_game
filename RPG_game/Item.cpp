@@ -42,3 +42,6 @@ ItemType Item::getType(){
 string Item::getInfo(){
     return itemInfo;
 }
+int Item::getStats(){
+    return stats;
+}

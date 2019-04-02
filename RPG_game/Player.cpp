@@ -41,3 +41,11 @@ void Player::removeItem(int itemId){
 }
 
 
+void Player::sortVectorStats(){
+    SortBody sb = SortBody(backpack);
+    backpack = sb.statsSort();
+}
+void Player::sortVectorNames(){
+    SortBody sb = SortBody(backpack);
+    backpack = sb.nameSort();
+}

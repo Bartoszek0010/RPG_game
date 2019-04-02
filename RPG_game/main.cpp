@@ -14,6 +14,7 @@
 #include "Floor.hpp"
 #include "Opponent.hpp"
 
+#include "SortBody.hpp"
 using namespace std;
 
 void getItemsInfo(Player &player){
@@ -144,8 +145,27 @@ void battle(Game &game, Player &player, Floor floor){
     }
 }
 
-
-
+void showItems(Player &player, Game &game){
+    Item item = game.createItem2();// add second sword to backpack
+    game.giveItem(player, item);
+    vector<Item> vec2show = player.getBackpack(); // get player's backpack
+    
+    for(int i= 0; i<vec2show.size();i++){ // show info of items
+        cout<<vec2show[i].getInfo()<<endl;
+    }
+    // sorting by stats
+    player.sortVectorStats(); // run sorting (stats sorting)
+    vec2show = player.getBackpack(); // again get backpack (sorted)
+    for(int i= 0; i<vec2show.size();i++){ // show info of items
+        cout<<vec2show[i].getInfo()<<endl;
+    }
+    // sorting by names
+    player.sortVectorNames(); // run sorting (stats sorting)
+    vec2show = player.getBackpack(); // again get backpack (sorted)
+    for(int i= 0; i<vec2show.size();i++){ // show info of items
+        cout<<vec2show[i].getInfo()<<endl;
+    }
+}
 
 int main(int argc, const char * argv[]) {
     srand(time(NULL));
@@ -154,6 +174,6 @@ int main(int argc, const char * argv[]) {
     Player &player = creating_player(game); // Creating your hero
     Floor floor = startingGame(game, player);
     battle(game, player, floor);
-    
+    showItems(player, game);
     return 0;
 }

@@ -78,9 +78,15 @@ Item Game::createItem(){
     string info = "God's sword, this is the strongest sword which you can meet in this world";
     Item item = Item(type, stat, name, info);
     return item;
-    
 }
-
+Item Game::createItem2(){
+    ItemType type = weapon;
+    int stat = 3;
+    string name = "sword";
+    string info = "Hell Sword";
+    Item item = Item(type, stat, name, info);
+    return item;
+}
 void Game::giveItem(Player &player, Item &item){
     player.addItem(item);
 }
@@ -129,3 +135,4 @@ string Game::fileType(string fileName){
 string Game::getFloorText(int floor){
     return floorText[floor];
 }
+
