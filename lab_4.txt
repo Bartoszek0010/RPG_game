@@ -1,0 +1,18 @@
+1. Proszę połączyć klasę reprezentującą postać z klasą reprezentującą przedmiot przy pomocy agregacji.
+Proszę zaimplementować połączenie przy pomocy std::vector.
+
+Proszę dodać metody które pozwolą na:
+
+- dodanie przemiotu - o ile nie przekroczony zostanie limit przedmitów (należy w jakiś sposób dodać taki limit)
+- usunięcie przedmiotu
+- zwrócenie std::vector<string> z opisem przedmiotów
+
+ CO ROBIIIC
+- Stworzę klase Item i jego podklasy
+- do klasy playera dodam vector zawierający itemy jakie osoba posiada
+
+
+CO DALEJ
+- wczytywanie ustawień gry czyli np. ile przeciwników jest tutaj, dialogi w grze, jakie itemy sa na pietrze itp.
+- dodanie wzorca handle-body 'Kompozyt' który pozwala odnosić się tak samo do jednego obiektu prostego jak do grupy takich obiektów
+https://pl.wikipedia.org/wiki/Kompozyt_(wzorzec_projektowy)

@@ -10,12 +10,34 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "RPG_game/Player.hpp"
-            timestampString = "575215397.133885"
+            timestampString = "575882410.919799"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
+<<<<<<< HEAD
             startingLineNumber = "16"
             endingLineNumber = "16"
             landmarkName = "class Player"
+=======
+            startingLineNumber = "19"
+            endingLineNumber = "19"
+            landmarkName = "class Player"
+            landmarkType = "3">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "RPG_game/SortBody.hpp"
+            timestampString = "575882410.919874"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "17"
+            endingLineNumber = "17"
+            landmarkName = "class SortBody"
+>>>>>>> item_files
             landmarkType = "3">
          </BreakpointContent>
       </BreakpointProxy>

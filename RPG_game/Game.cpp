@@ -70,3 +70,69 @@ int Game::attack(Player &player, Opponent &opponent, int playerDec){
     }
     return opponentDec;
 }
+
+Item Game::createItem(){
+    ItemType type = weapon;
+    int stat = 5;
+    string name = "sword";
+    string info = "God's sword, this is the strongest sword which you can meet in this world";
+    Item item = Item(type, stat, name, info);
+    return item;
+}
+Item Game::createItem2(){
+    ItemType type = weapon;
+    int stat = 3;
+    string name = "sword";
+    string info = "Hell Sword";
+    Item item = Item(type, stat, name, info);
+    return item;
+}
+void Game::giveItem(Player &player, Item &item){
+    player.addItem(item);
+}
+
+
+// handle body to reading text and puuting into map (text of every floor)
+void Game::fillFloorMap(string fileName){
+    string nfileType = fileType(fileName);
+    if(nfileType == "txt"){
+        reader txtReader = make_unique<TxtFileReader>();
+        txtReader->setFileName(fileName);
+        try{
+            floorText = txtReader->fillMap();
+        } catch(const char *e){
+            cerr<<e<<endl;
+        }
+    } else if(nfileType == "xml"){
+        reader xmlReader = make_unique<XMLFileReader>();
+        xmlReader->setFileName(fileName);
+        try{
+            floorText = xmlReader->fillMap();
+        } catch(const char *e){
+            cerr<<e<<endl;
+        }
+    } else{
+        cout<<"aaaa";
+    }
+    //cout<<floorText[1]<<endl; // checking of filling map
+}
+// getting type of reading file
+string Game::fileType(string fileName){
+    string returnType;
+    bool startAdding = false;
+    for(int i=0; i<fileName.length();i++){
+        if(startAdding){
+            returnType += fileName[i];
+        }
+        
+        if(fileName[i] == '.'){
+            startAdding = true;
+        }
+    }
+    return returnType;
+}
+// returning text of every floor
+string Game::getFloorText(int floor){
+    return floorText[floor];
+}
+
