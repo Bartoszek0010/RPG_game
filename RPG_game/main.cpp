@@ -74,6 +74,7 @@ Floor startingGame(Game &game, Player &player){
     int opponents = 1, number = 1;
     bool boss = false, shop = false;
     //////////////////
+    
     Floor floor = game.createFloor(number, opponents, boss, shop);
     cout<<"You are starting this great war!! At the start you are on the first floor of Kapitol. To help you on every floor i will be inform you how many opponents you will meet on this level, is here a Boss and is here a Vendor with his shop. So let's GO!"<<endl;
     informPlayer(opponents, boss, shop);
