@@ -15,11 +15,13 @@
 #include <map>
 #include <fstream>
 
+#include "Item.hpp"
 using namespace std;
 class FileReader {
 protected:
     string fileName;
     map<int, string> textMap;
+    
 public:
     void setFileName(string nfileName){
         fileName = nfileName;

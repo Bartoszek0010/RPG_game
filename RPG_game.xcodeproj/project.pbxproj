@@ -10,6 +10,11 @@
 		BB16ED842248DCE20079DB94 /* Location.cpp in Sources */ = {isa = PBXBuildFile; fileRef = BB16ED822248DCE20079DB94 /* Location.cpp */; };
 		BB16ED872248DDCC0079DB94 /* Floor.cpp in Sources */ = {isa = PBXBuildFile; fileRef = BB16ED852248DDCC0079DB94 /* Floor.cpp */; };
 		BB16ED8A2248E7670079DB94 /* Opponent.cpp in Sources */ = {isa = PBXBuildFile; fileRef = BB16ED882248E7660079DB94 /* Opponent.cpp */; };
+		BB1DB7ED225C716A00D450A3 /* Vendor.cpp in Sources */ = {isa = PBXBuildFile; fileRef = BB1DB7EB225C716A00D450A3 /* Vendor.cpp */; };
+		BB1DB7F0225C739000D450A3 /* ItemsFileReader.cpp in Sources */ = {isa = PBXBuildFile; fileRef = BB1DB7EE225C739000D450A3 /* ItemsFileReader.cpp */; };
+		BB1DB7F3225C74C600D450A3 /* VendorItemReader.cpp in Sources */ = {isa = PBXBuildFile; fileRef = BB1DB7F1225C74C600D450A3 /* VendorItemReader.cpp */; };
+		BB1DB7F6225C7A6D00D450A3 /* ItemOpponentAdapter.cpp in Sources */ = {isa = PBXBuildFile; fileRef = BB1DB7F4225C7A6D00D450A3 /* ItemOpponentAdapter.cpp */; };
+		BB1DB7F9225C7FEB00D450A3 /* Boss.cpp in Sources */ = {isa = PBXBuildFile; fileRef = BB1DB7F7225C7FEB00D450A3 /* Boss.cpp */; };
 		BB2C69A22240D0AB001D51BC /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = BB2C69A12240D0AB001D51BC /* main.cpp */; };
 		BB2C69AA2240D0F6001D51BC /* Game.cpp in Sources */ = {isa = PBXBuildFile; fileRef = BB2C69A82240D0F6001D51BC /* Game.cpp */; };
 		BB2C69AD2240D2B8001D51BC /* Character.cpp in Sources */ = {isa = PBXBuildFile; fileRef = BB2C69AB2240D2B8001D51BC /* Character.cpp */; };
@@ -42,6 +47,16 @@
 		BB16ED862248DDCC0079DB94 /* Floor.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Floor.hpp; sourceTree = "<group>"; };
 		BB16ED882248E7660079DB94 /* Opponent.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Opponent.cpp; sourceTree = "<group>"; };
 		BB16ED892248E7660079DB94 /* Opponent.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Opponent.hpp; sourceTree = "<group>"; };
+		BB1DB7EB225C716A00D450A3 /* Vendor.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Vendor.cpp; sourceTree = "<group>"; };
+		BB1DB7EC225C716A00D450A3 /* Vendor.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Vendor.hpp; sourceTree = "<group>"; };
+		BB1DB7EE225C739000D450A3 /* ItemsFileReader.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = ItemsFileReader.cpp; sourceTree = "<group>"; };
+		BB1DB7EF225C739000D450A3 /* ItemsFileReader.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = ItemsFileReader.hpp; sourceTree = "<group>"; };
+		BB1DB7F1225C74C600D450A3 /* VendorItemReader.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = VendorItemReader.cpp; sourceTree = "<group>"; };
+		BB1DB7F2225C74C600D450A3 /* VendorItemReader.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = VendorItemReader.hpp; sourceTree = "<group>"; };
+		BB1DB7F4225C7A6D00D450A3 /* ItemOpponentAdapter.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = ItemOpponentAdapter.cpp; sourceTree = "<group>"; };
+		BB1DB7F5225C7A6D00D450A3 /* ItemOpponentAdapter.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = ItemOpponentAdapter.hpp; sourceTree = "<group>"; };
+		BB1DB7F7225C7FEB00D450A3 /* Boss.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Boss.cpp; sourceTree = "<group>"; };
+		BB1DB7F8225C7FEB00D450A3 /* Boss.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Boss.hpp; sourceTree = "<group>"; };
 		BB2C699E2240D0AB001D51BC /* RPG_game */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = RPG_game; sourceTree = BUILT_PRODUCTS_DIR; };
 		BB2C69A12240D0AB001D51BC /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
 		BB2C69A82240D0F6001D51BC /* Game.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Game.cpp; sourceTree = "<group>"; };
@@ -123,6 +138,16 @@
 				BBEFD52E22516A0500EB935D /* XMLFileReader.hpp */,
 				BBAE2E212253383000CAE6B6 /* SortBody.cpp */,
 				BBAE2E222253383000CAE6B6 /* SortBody.hpp */,
+				BB1DB7EB225C716A00D450A3 /* Vendor.cpp */,
+				BB1DB7EC225C716A00D450A3 /* Vendor.hpp */,
+				BB1DB7EE225C739000D450A3 /* ItemsFileReader.cpp */,
+				BB1DB7EF225C739000D450A3 /* ItemsFileReader.hpp */,
+				BB1DB7F1225C74C600D450A3 /* VendorItemReader.cpp */,
+				BB1DB7F2225C74C600D450A3 /* VendorItemReader.hpp */,
+				BB1DB7F4225C7A6D00D450A3 /* ItemOpponentAdapter.cpp */,
+				BB1DB7F5225C7A6D00D450A3 /* ItemOpponentAdapter.hpp */,
+				BB1DB7F7225C7FEB00D450A3 /* Boss.cpp */,
+				BB1DB7F8225C7FEB00D450A3 /* Boss.hpp */,
 			);
 			path = RPG_game;
 			sourceTree = "<group>";
@@ -184,6 +209,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				BBEFD52F22516A0500EB935D /* XMLFileReader.cpp in Sources */,
+				BB1DB7F6225C7A6D00D450A3 /* ItemOpponentAdapter.cpp in Sources */,
+				BB1DB7ED225C716A00D450A3 /* Vendor.cpp in Sources */,
 				BBAE2E232253383000CAE6B6 /* SortBody.cpp in Sources */,
 				BBD7FEBE224A545A00A4042C /* ItemType.cpp in Sources */,
 				BBD7FEBB224A4D9E00A4042C /* Item.cpp in Sources */,
@@ -191,8 +218,11 @@
 				BB2C69B12240D38B001D51BC /* Normal_stats.cpp in Sources */,
 				BBEFD52922515CC700EB935D /* FileReader.cpp in Sources */,
 				BB16ED872248DDCC0079DB94 /* Floor.cpp in Sources */,
+				BB1DB7F0225C739000D450A3 /* ItemsFileReader.cpp in Sources */,
+				BB1DB7F9225C7FEB00D450A3 /* Boss.cpp in Sources */,
 				BB2C69AD2240D2B8001D51BC /* Character.cpp in Sources */,
 				BB2C69A22240D0AB001D51BC /* main.cpp in Sources */,
+				BB1DB7F3225C74C600D450A3 /* VendorItemReader.cpp in Sources */,
 				BB2C69AA2240D0F6001D51BC /* Game.cpp in Sources */,
 				BBEFD52C22515EE000EB935D /* TxtFileReader.cpp in Sources */,
 				BB16ED842248DCE20079DB94 /* Location.cpp in Sources */,

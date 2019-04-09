@@ -13,8 +13,9 @@
 #include "Player.hpp"
 #include "Floor.hpp"
 #include "Opponent.hpp"
-
+#include "Boss.hpp"
 #include "SortBody.hpp"
+#include "ItemOpponentAdapter.hpp"
 using namespace std;
 
 void getItemsInfo(Player &player){
@@ -176,5 +177,10 @@ int main(int argc, const char * argv[]) {
     Floor floor = startingGame(game, player);
     battle(game, player, floor);
     showItems(player, game);
+    
+    //adapter -> Boss is a special weapon
+    using boss = unique_ptr<Boss>;
+    boss b1 = make_unique<ItemOpponentAdapter>();
+    b1->attack();
     return 0;
 }
